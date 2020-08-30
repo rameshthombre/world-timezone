@@ -12,7 +12,7 @@ http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/htt
 	</http:request-config>
 	<flow name="test-projectFlow" doc:id="c866632e-cc83-41a9-bf0c-94df3efae94c" >
 		<http:listener doc:name="Listener" doc:id="931d06d4-4864-4c66-aa02-a8506a1cc6da" config-ref="HTTP_Listener_config" path="/{region}/{city}"/>
-		<http:request method="GET" doc:name="Request" doc:id="3975a3cc-d5f8-4ad4-8646-fbcadeac92fb" config-ref="HTTP_Request_configuration" path="/{region}/{city}">
+		<http:request method="GET" doc:name="Back End Service call" doc:id="3975a3cc-d5f8-4ad4-8646-fbcadeac92fb" config-ref="HTTP_Request_configuration" path="/{region}/{city}">
 			<http:uri-params ><![CDATA[#[output application/java
 ---
 {
@@ -20,5 +20,6 @@ http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/htt
 	region : attributes.uriParams.region
 }]]]></http:uri-params>
 		</http:request>
+		<logger level="INFO" doc:name="END - Logger" doc:id="38245d04-bc06-4984-9c13-738352e911d8" message="END - Logger"/>
 	</flow>
 </mule>
