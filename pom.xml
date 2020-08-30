@@ -39,6 +39,7 @@
 						<workerType>Micro</workerType>
 						<applicationName>test-project</applicationName>
 						<muleVersion>4.2.2</muleVersion>
+						<uri>https://anypoint.mulesoft.com/</uri>
 					</cloudHubDeployment>
 				</configuration>
 			</plugin>
