@@ -38,7 +38,7 @@
 						<workers>1</workers>
 						<workerType>Micro</workerType>
 						<applicationName>test-project</applicationName>
-						<muleVersion>4.3.0</muleVersion>
+						<muleVersion>4.2.2</muleVersion>
 					</cloudHubDeployment>
 				</configuration>
 			</plugin>
